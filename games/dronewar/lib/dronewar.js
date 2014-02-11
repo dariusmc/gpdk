@@ -1502,7 +1502,7 @@
       this.config.size = 25;
       Drone.__super__.constructor.call(this, this.config);
       this.stop();
-      this.max_speed = 12;
+      this.max_speed = 15;
       this.energy = this.config.energy || 1;
       this.image.remove();
       this.g.attr("class", "drone");
@@ -1598,7 +1598,7 @@
       Dronewar.__super__.constructor.apply(this, arguments);
       this.svg.style("background-image", 'url(' + Dronewar.bg_img + ')').style('background-size', '100%');
       this.max_score_increment = 500000;
-      this.initialN = this.config.initialN || 2;
+      this.initialN = this.config.initialN || 0;
       this.N = this.initialN;
       this.root = new Root();
       this.scoretxt = this.g.append("text").text("").attr("stroke", "none").attr("fill", "white").attr("font-size", "18").attr("x", "20").attr("y", "40").attr('font-family', 'arial bold');
@@ -1668,7 +1668,7 @@
         type: 'charge',
         cx: this.root.r.x,
         cy: this.root.r.y,
-        q: this.root.charge * 500 * this.speed * this.speed
+        q: this.root.charge * 1000 * this.speed * this.speed
       };
       _ref = this.element;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {

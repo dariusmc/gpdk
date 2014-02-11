@@ -6,7 +6,7 @@ class @Dronewar extends Game
     super
     @svg.style("background-image", 'url(' + Dronewar.bg_img + ')').style('background-size', '100%')
     @max_score_increment = 500000 # optional max score per update for accurate Gameprez secure-tracking
-    @initialN = @config.initialN || 2
+    @initialN = @config.initialN || 0
     @N        = @initialN
     @root     = new Root() # root element i.e. under user control  
     @scoretxt = @g.append("text").text("")
@@ -90,7 +90,7 @@ class @Dronewar extends Game
       type: 'charge'
       cx: @root.r.x
       cy: @root.r.y
-      q:  @root.charge * 500 * @speed * @speed # charge
+      q:  @root.charge * 1000 * @speed * @speed # charge
     drone.force_param[0] = @param for drone in @element
     return
 

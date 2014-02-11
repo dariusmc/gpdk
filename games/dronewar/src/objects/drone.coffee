@@ -5,7 +5,7 @@ class @Drone extends Circle
     @config.size = 25
     super(@config)
     @stop()
-    @max_speed = 12
+    @max_speed = 15
     @energy = @config.energy || 1
     @image.remove()
     @g.attr("class", "drone")
